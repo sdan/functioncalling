@@ -7,7 +7,7 @@ import {
 const MAX_CHARACTERS = 10000;
 // Configure OpenAI API
 const openai = new OpenAI({
-  apiKey: 'REPLACEMENT_TEXT', // defaults to process.env["OPENAI_API_KEY"]
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 export async function POST(request: NextRequest) {
