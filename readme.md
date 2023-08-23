@@ -1,28 +1,13 @@
-# Next.js App Router Playground
+# functioncalling
 
-Next.js recently introduced the App Router with support for:
+Here, you can turn small JavaScript functions into GPT function calls that you can call via an API. All functions are run on val.town.
+----
 
-- **Layouts:** Easily share UI while preserving state and avoiding re-renders.
-- **Server Components:** Making server-first the default for the most dynamic applications.
-- **Streaming:** Display instant loading states and stream in updates.
-- **Suspense for Data Fetching:** `async`/`await` support and the `use` hook for component-level fetching.
-
-The App Router can coexist with the existing `pages` directory for incremental adoption. While you **don't need to use the App Router** when upgrading to Next.js 13, we're laying the foundations to build complex interfaces while shipping less JavaScript.
-
-## Running Locally
-
-1. Install dependencies:
-
-```sh
-pnpm install
-```
-
-2. Start the dev server:
-
-```sh
-pnpm dev
-```
-
-## Documentation
-
-https://nextjs.org/docs
+## Use via POST:
+To make a POST request to the API, use the endpoint:
+https://functioncalling.fun/api?vals=@sdan.chatWithPdfRetriever
+Include the following JSON payload in the request body:
+{
+  "prompt": ""
+}
+Make sure to set the Content-Type header to application/json.
